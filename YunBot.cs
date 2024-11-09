@@ -3651,11 +3651,11 @@ public class YunPlgun : IBotPlugin /* or ICorePlugin */
         string url;
         if (usingcookie && cookie != "")
         {
-            url = WangYiYunAPI_Address + "/song/url?id=" + id.ToString() + "&cookie=" + cookie;
+            url = WangYiYunAPI_Address + "/song/url?id=" + id.ToString() + "&br=96000" + "&cookie=" + cookie;
         }
         else
         {
-            url = WangYiYunAPI_Address + "/song/url?id=" + id.ToString();
+            url = WangYiYunAPI_Address + "/song/url?id=" + id.ToString() + "&br=96000";
         }
         string musicurljson = HttpGet(url);
         musicURL musicurl = JsonSerializer.Deserialize<musicURL>(musicurljson);
@@ -3670,11 +3670,11 @@ public class YunPlgun : IBotPlugin /* or ICorePlugin */
         string url;
         if (usingcookie && cookie != "")
         {
-            url = WangYiYunAPI_Address + "/song/url?id=" + id + "&cookie=" + cookie;
+            url = WangYiYunAPI_Address + "/song/url?id=" + id + "&br=96000" + "&cookie=" + cookie;
         }
         else
         {
-            url = WangYiYunAPI_Address + "/song/url?id=" + id;
+            url = WangYiYunAPI_Address + "/song/url?id=" + id + "&br=96000";
         }
         string musicurljson = HttpGet(url);
         musicURL musicurl = JsonSerializer.Deserialize<musicURL>(musicurljson);
